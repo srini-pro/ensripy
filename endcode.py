@@ -16,10 +16,10 @@ print("""=======================================================================
  yay.txt
 6 answer a simple question
 """)
-messagebox.showerror(please enter the filename')
-filename = Entry(window, font=('Courier', 14))
+messagebox.showerror('please enter the filename')
 objects = []
 window = Tk()
+filename = Entry(window, font=('Courier', 14))
 window.withdraw()
 window.title('Email Storage')
 
