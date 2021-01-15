@@ -9,20 +9,15 @@ print("""=======================================================================
 ====================================================================================================================================================================================================================================
 1    please enter password
 2    create a blank file
-3    call it "read.ensripy"
 4    when entered password password should be encreapted like  sit on the keyboard  or just type a list of  letters its ok to even keep them short
-5 how to not get an error
- try renaming other files called read.ensripy to diffrent name but do not chande the end like;
- yay.endripy
+5   compadable;
+ yay.ensripy
  but not like:
  yay.txt
-6  how to share encreapted ensripy's
- when you reaseave a ensripy
- rename other read.ensripy's
- and start  this
-
-7 how to get around read and change them unfourtunatly the feature will come soon and is not intergrated
- """)
+6 answer a simple question
+""")
+messagebox.showerror(please enter the filename')
+filename = Entry(window, font=('Courier', 14))
 objects = []
 window = Tk()
 window.withdraw()
@@ -47,7 +42,7 @@ class popupWindow(object):
 
     def cleanup(self):
         self.value = self.e.get()
-        access = 'yay'
+        access = 'en'
 
         if self.value == access:
             self.loop = True
@@ -69,7 +64,7 @@ class entity_add:
         self.window = master
 
     def write(self):
-        f = open('read.ensripy', "a")
+        f = open(filename, "a")
         n = self.name
         e = self.email
         p = self.password
@@ -147,11 +142,11 @@ class entity_display:
             for i in objects:
                 i.destroy()
 
-            f = open('read.ensripy', 'r')
+            f = open(filename, 'r')
             lines = f.readlines()
             f.close()
 
-            f = open('read.ensripy', "w")
+            f = open(filename, "w")
             count = 0
 
             for line in lines:
@@ -186,12 +181,12 @@ def onsubmit():
 
 
 def clearfile():
-    f = open('read.ensripy', "w")
+    f = open(filename, "w")
     f.close()
 
 
 def readfile():
-    f = open('read.ensripy', 'r')
+    f = open(filename, 'r')
     count = 1
 
     for line in f:
